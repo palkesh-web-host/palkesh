@@ -1256,6 +1256,54 @@ div#portfolioModal1, div#portfolioModal2, div#portfolioModal3, div#portfolioModa
 	z-index: 2;
 }
 
+/* Image hover */
+.work-container {
+	position: relative;
+	width: 100%;
+}
+
+.project-image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.work-container:hover .project-image {
+	opacity: 0.3;
+}
+
+.work-container:hover .middle {
+	opacity: 1;
+}
+
+.project-title {
+	background-color: #00a78e;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+
+.work-container a:hover {
+	color: #ffffff;
+}
+.work-container a:visited {
+	color: #ffffff;
+}
+
 @media(min-width:767px) {
 	#portfolio .portfolio-item {
 		margin: 0 0 30px;
@@ -1284,7 +1332,8 @@ div#portfolioModal1, div#portfolioModal2, div#portfolioModal3, div#portfolioModa
 	top: 25px;
 	right: 25px;
 	width: 45px;
-	height: 45px background-color: transparent;
+	height: 45px;
+	background-color: transparent;
 	cursor: pointer;
 	z-index: 1;
 }
@@ -1332,7 +1381,7 @@ div#portfolioModal1, div#portfolioModal2, div#portfolioModal3, div#portfolioModa
 
 #port {
 	padding: 5em 0 0 0;
-	background: #f4f4f4;
+	background: #ffffff;
 }
 
 /*-- //portfolio --*/
@@ -1580,6 +1629,10 @@ span.border.two:after {
 		font-size: 0.9em;
 		line-height: 2em;
 		margin-top: 0.5em;
+	}
+	.project-title {
+		font-size: 15px;
+		padding: 13px 18px;
 	}
 }
 
@@ -2291,52 +2344,4 @@ span.border.two:after {
 		margin-top: -62px;
 		padding: 6px 0;
 	}
-}
-
-/* Image hover */
-.work-container {
-	position: relative;
-	width: 100%;
-}
-
-.project-image {
-	opacity: 1;
-	display: block;
-	width: 100%;
-	height: auto;
-	transition: .5s ease;
-	backface-visibility: hidden;
-}
-
-.middle {
-	transition: .5s ease;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	text-align: center;
-}
-
-.work-container:hover .project-image {
-	opacity: 0.3;
-}
-
-.work-container:hover .middle {
-	opacity: 1;
-}
-
-.project-title {
-	background-color: #00a78e;
-	color: white;
-	font-size: 16px;
-	padding: 16px 32px;
-}
-
-.work-container a:hover {
-	color: #ffffff;
-}
-.work-container a:visited {
-	color: #ffffff;
 }
